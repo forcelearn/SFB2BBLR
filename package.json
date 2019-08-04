@@ -2,6 +2,7 @@
     "name": "SFB2BBLR",
     "version": "0.0.0",
     "author": "forcelearn",
+    "homepage" : "https://forcelearn.github.io/SFB2BBLR/",
     "bugs": "https://github.com/forcelearn/SFB2BBLR/issues",
     "dependencies": {
         "lwc-services": "^1.2.2"
@@ -14,7 +15,6 @@
     "engines": {
         "node": ">=10.0.0"
     },
-    "homepage": "https://github.com/forcelearn/SFB2BBLR",
     "husky": {
         "hooks": {
             "pre-commit": "lint-staged"
@@ -37,7 +37,7 @@
     },
     "repository": "forcelearn/SFB2BBLR",
     "scripts": {
-        "build": "lwc-services build -m production",
+        "build": "lwc-services build --mode production",
         "build:development": "lwc-services build",
         "lint": "eslint ./src/**/*.js",
         "prettier": "prettier --write '**/*.{css,html,js,json,md,yaml,yml}'",
@@ -47,6 +47,7 @@
         "test:unit:coverage": "lwc-services test --coverage",
         "test:unit:debug": "lwc-services test --debug",
         "test:unit:watch": "lwc-services test --watch",
-        "watch": "lwc-services watch"
+        "watch": "lwc-services watch",
+        "watch:production": "lwc-services watch --mode=production"
     }
 }
